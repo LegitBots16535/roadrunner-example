@@ -54,6 +54,7 @@ import static org.firstinspires.ftc.teamcode.drive.DriveConstants.kV;
 /*
  * Simple mecanum drive hardware implementation for REV hardware.
  */
+
 @Config
 public class    SampleMecanumDrive extends MecanumDrive {
     public static PIDCoefficients TRANSLATIONAL_PID = new PIDCoefficients(0, 0, 0);
@@ -101,7 +102,6 @@ public class    SampleMecanumDrive extends MecanumDrive {
         // TODO: if your hub is mounted vertically, remap the IMU axes so that the z-axis points
         // upward (normal to the floor) using a command like the following:
         BNO055IMUUtil.remapAxes(imu, AxesOrder.XYZ, AxesSigns.NPN);
-
         leftFront = hardwareMap.get(DcMotorEx.class, "LF");
         leftRear = hardwareMap.get(DcMotorEx.class, "LB");
         rightRear = hardwareMap.get(DcMotorEx.class, "RB");
